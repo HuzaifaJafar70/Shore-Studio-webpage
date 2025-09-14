@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHORE Studio</title>
+    <link rel="icon" href="images//imagecopy-Picsart-AiImageEnhancer.jpg" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    #time {
+      font-size: 0.8em; 
+    }
+  </style>
+   <script>
+    
+  tailwind.config = {
+    theme: {
+      extend: {
+
+      fontWeight: {
+        475: '475',   
+        495: '495',   
+      },
+        screens: {
+          'sm': '622px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1300px',
+          '2xl': '1500px',
+            '3xl': '1700px',
+
+          
+          'xs': {'min': '589px', 'max': '807px'},
+          'ms': {'min': '401px', 'max': '621px'},
+          'xxs': {'min': '401px', 'max': '1198px'},
+          '2sm': {'min': '812px', 'max': '1023px'},
+          'sc': {'min': '400px', 'max': '811px'},
+          '1ssc': {'min': '1102px', 'max': '1198px'},
+          '2ssc': {'min': '962px', 'max': '1188px'},
+        },
+        colors: {
+          clifford: '#da373d',
+          lime: '#6eff33',
+        },
+  keyframes: {
+  slide: {
+    '0%': { transform: 'translateX(0)' },
+    '100%': { transform: 'translateX(-100%)' }, 
+  }
+},
+animation: {
+  slide: 'slide 80s linear infinite',
+},
+      },
+    },
+  }
+</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/h1_hero1.png.webp" type="image/x-icon">
+</head>
+<body class="bg-[#e6e6e6] h-full  m-0">
+
+
+ <!--First navbar (date and time section start)-->
+
+<nav class="fixed top-0 left-0 right-0 text-black px-2 py-3 flex justify-between items-center z-50 bg-transparent">
+  <div class="h-[50px] w-[50px]">
+    <img src="images/123.jpg"/>
+  </div>
+  
+  <div id="stockholm-time" class="text-sm flex flex-col items-center font-normal leading-[0.95]">
+    <span id="time" class="mr-3"></span>
+    <span class="text-xs mr-5 ml-20">Stockholm</span>
+  </div>
+</nav>
+
+<script>
+function formatTime() {
+  const now = new Date();
+
+  const weekday = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Stockholm',
+    weekday: 'long'
+  }).format(now);
+
+  const datePart = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Stockholm',
+    month: '2-digit',
+    day: '2-digit',
+    year: '2-digit'
+  }).format(now);
+
+  const timePart = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Stockholm',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  }).format(now);
+
+  document.getElementById('time').textContent =
+    `${weekday}, ${datePart}, ${timePart}`;
+}
+
+setInterval(formatTime, 1000);
+formatTime();
+</script>
+
+
+ <!--First navbar (date and time section end)-->
+
+
+
+  <!--Main navbar start-->
+
+<div class="flex justify-center fixed top-6 [@media(min-width:400px)_and_(max-width:768px)]:top-14 left-0 right-0 z-50">
+  <div class="inline-flex font-[Helvetica Neue] items-center justify-center gap-4 p-2 font-normal text-[14px] rounded-full 
+              backdrop-blur-xl bg-white/2
+              border border-white/15 shadow-md shadow-black/5 text-black
+              max-md:gap-2 max-md:px-3 max-md:text-[12px]">
+    
+    <a href="#what" class="px-5 py-[8px] rounded-full text-black hover:bg-[#FF4E21]/80 hover:text-white transition-all duration-300">
+      What
+    </a>
+
+    <a href="#how" class="px-5 py-[8px] rounded-full text-black hover:bg-[#FF4E21]/80 hover:text-white transition-all duration-300">
+      How
+    </a>
+
+    <a href ="#plans" class="px-5 py-[8px] rounded-full text-black hover:bg-[#FF4E21]/80 hover:text-white transition-all duration-300">
+      Plans
+    </a>
+
+    <a  href="refrence.html"  class="px-5 py-[12px] bg-[#B0FB90]/70 rounded-full text-black hover:bg-[#FF4E21]/80 hover:text-white transition-all duration-300">
+      Contact
+    </a>
+   
+  </div>
+</div>
+
+
+<!--Main navbar end-->
+
+
+<!--Main hero section no 1 start-->
+
+
+<div class=" mt-20 flex flex-col items-center justify-center text-center bg-[#e6e6e6] px-4 pt-20 font-[Helvetica Neue]">
+
+  
+  <h1 class="text-[48px] font-[495]     /* small screens */
+             leading-[1.05] 
+             tracking-[-3.5px]    /* very tight letters */
+             min-[400px]:text-[72px] 
+             lg:text-[80px] 
+             lg:leading-[0.95] 
+             max-w-6xl"
+      style="font-weight: 460;">
+    We empower leading brands to produce more content, faster and smarter.
+  </h1>
+
+  
+  <p class=" font-medium mt-8 text-[12px] min-[400px]:text-[10px] lg:text-[12px] text-black max-w-2xl leading-relaxed">
+    Shore is a design production agency offering unlimited access to a creative team for a fixed monthly fee.
+  </p>
+
+
+  <button class="mt-8  px-6 py-5 
+                 bg-[#FF3B00] text-black [@media(min-width:400px)_and_(max-width:1020px)]:mb-20 text-[13px] 
+                 rounded-full shadow-md hover:scale-105 transition-transform duration-300 ease-in-out">
+    Talk to an expert
+  </button>
+
+</div>
+
+
+<!--Main hero section no 1 end -->
+
+
+
+<!--Cards section start -->
+
+
+<div id="what" class="lg:-mt-20 bg-[#e6e6e6] flex flex-col lg:flex-row gap-4 w-full px-4 lg:px-10 items-center lg:h-screen mb-12 lg:mb-0 font-[Helvetica Neue] text-[14px]">
+
+  
+  <div class="group relative w-[95%] lg:w-[45%] flex flex-col bg-[#FF4E21] rounded-3xl p-4 lg:p-6 transition-all duration-500 cursor-pointer overflow-hidden 
+              h-24 lg:h-64 lg:hover:w-[65%]">
+    <div class="flex justify-between items-start text-sm lg:text-base">
+      <span>01.</span>
+      <span class="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-[#FFFFFF1A]">↗</span>
+    </div>
+    <h3 class="-mt-4 lg:mt-10 font-normal text-center transition-all duration-500 group-hover:text-left">
+      Fixed price
+    </h3>
+    <p class="hidden lg:block font-medium mt-4 text-sm relative
+               lg:absolute lg:bottom-6 lg:left-6 lg:right-6 
+               lg:opacity-0 lg:transition-all lg:duration-500
+               lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+      Transparent and predictable billing with no surprises.
+    </p>
+  </div>
+
+  
+  <div class="group relative w-[95%] lg:w-[45%] flex flex-col bg-[#900300] rounded-3xl p-4 lg:p-6 transition-all duration-500 cursor-pointer overflow-hidden 
+              h-24 lg:h-64 lg:hover:w-[65%] text-white">
+    <div class="flex justify-between items-start text-sm lg:text-base">
+      <span>02.</span>
+      <span class="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-[#FFFFFF1A]">↗</span>
+    </div>
+    <h3 class="-mt-4 lg:mt-10 font-normal text-center transition-all duration-500 group-hover:text-left">
+      Unlimited design
+    </h3>
+    <p class="hidden lg:block font-medium mt-4 text-sm relative
+               lg:absolute lg:bottom-6 lg:left-6 lg:right-6 
+               lg:opacity-0 lg:transition-all lg:duration-500
+               lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+      Transparent and predictable billing with no surprises.
+    </p>
+  </div>
+
+  
+  <div class="group relative w-[95%] lg:w-[45%] flex flex-col bg-[#D21D19] rounded-3xl p-4 lg:p-6 transition-all duration-500 cursor-pointer overflow-hidden 
+              h-24 lg:h-64 lg:hover:w-[65%]">
+    <div class="flex justify-between items-start text-sm lg:text-base">
+      <span>03.</span>
+      <span class="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-[#FFFFFF1A]">↗</span>
+    </div>
+    <h3 class="-mt-4 lg:mt-10 font-normal text-center transition-all duration-500 group-hover:text-left">
+      Boundless revisions
+    </h3>
+    <p class="hidden lg:block font-medium mt-4 text-sm relative
+               lg:absolute lg:bottom-6 lg:left-6 lg:right-6 
+               lg:opacity-0 lg:transition-all lg:duration-500
+               lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+      Transparent and predictable billing with no surprises.
+    </p>
+  </div>
+
+  
+  <div class="group relative w-[95%] lg:w-[45%] flex flex-col bg-[#C9CFEC] rounded-3xl p-4 lg:p-6 transition-all duration-500 cursor-pointer overflow-hidden 
+              h-24 lg:h-64 lg:hover:w-[65%]">
+    <div class="flex justify-between items-start text-sm lg:text-base">
+      <span>04.</span>
+      <span class="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-[#FFFFFF1A]">↗</span>
+    </div>
+    <h3 class="-mt-4 lg:mt-10 font-normal text-center transition-all duration-500 group-hover:text-left">
+      Monthly or annually
+    </h3>
+    <p class="hidden lg:block font-medium mt-4 text-sm relative
+               lg:absolute lg:bottom-6 lg:left-6 lg:right-6 
+               lg:opacity-0 lg:transition-all lg:duration-500
+               lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+      Transparent and predictable billing with no surprises.
+    </p>
+  </div>
+
+  
+  <div class="group relative w-[95%] lg:w-[45%] flex flex-col bg-[#DBDDE7] rounded-3xl p-4 lg:p-6 transition-all duration-500 cursor-pointer overflow-hidden 
+              h-24 lg:h-64 lg:hover:w-[65%]">
+    <div class="flex justify-between items-start text-sm lg:text-base">
+      <span>05.</span>
+      <span class="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-[#FFFFFF1A]">↗</span>
+    </div>
+    <h3 class="-mt-4 lg:mt-10 font-normal text-center transition-all duration-500 group-hover:text-left">
+      Up or downgrade
+    </h3>
+    <p class="hidden lg:block font-medium mt-4 text-sm relative
+               lg:absolute lg:bottom-6 lg:left-6 lg:right-6 
+               lg:opacity-0 lg:transition-all lg:duration-500
+               lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+      Transparent and predictable billing with no surprises.
+    </p>
+  </div>
+
+  
+  <div class="group relative w-[95%] lg:w-[45%] flex flex-col bg-[#000000] rounded-3xl p-4 lg:p-6 transition-all duration-500 cursor-pointer overflow-hidden 
+              h-24 lg:h-64 lg:hover:w-[65%] text-white">
+    <div class="flex justify-between items-start text-sm lg:text-base">
+      <span>06.</span>
+      <span class="w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-[#FFFFFF1A]">↗</span>
+    </div>
+    <h3 class="-mt-4 lg:mt-10 font-normal text-center transition-all duration-500 group-hover:text-left">
+      Monthly reports
+    </h3>
+    <p class="hidden lg:block font-medium mt-4 text-sm relative
+               lg:absolute lg:bottom-6 lg:left-6 lg:right-6 
+               lg:opacity-0 lg:transition-all lg:duration-500
+               lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+      Transparent and predictable billing with no surprises.
+    </p>
+  </div>
+
+</div>
+
+<!--Cards section end -->
+
+
+<!--Video section start -->
+
+<div class="overflow-hidden rounded-2xl shadow-lg mb-10 mx-10 lg:-mt-20">
+  <video 
+    class="w-full h-auto rounded-2xl" 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+  >
+    <source src="images/shorevideo.mp4" type="video/mp4">
+    
+  </video>
+</div>
+
+<!--Video section end -->
+
+
+<!--Hero section no 2 (includes team photos ) start -->
+
+
+<div class="  mx-2 text-[45px] font-Helvetica Neue font-normal mb-7 ml-10 xs:hidden  leading-tight  ms:text-center ms:text-[20px]"><p>Our team</p></div>
+<div class="grid grid-cols-3 mx-10 gap-4 mt-10
+    sc:grid-cols-3 sc:grid-rows-1 sc:justify-center sc:place-items-center sc:[&>*]:mx-auto
+    sc:[grid-template-columns:repeat(3,auto)] sc:[&>*]:w-[116px]">
+
+    <div>
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/oneperson.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] md:text-[23px] font-normal leading-tight">Frans Christenson</p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Motion Designer</p>
+    </div>
+
+    <div>
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/twoperson.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] text-[23px] font-normal leading-tight">Max Urbina</p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Senior  Designer</p>
+    </div>
+
+    <div>
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/oli.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] text-[23px] font-normal leading-tight">Casper Ehrenborg</p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Motion Designer</p>
+    </div>
+
+</div>
+
+
+<div class="grid grid-cols-4 mx-10 gap-4 mt-12 sc:mt-5
+     sc:grid-cols-3 sc:grid-rows-2 sc:justify-center  sc:place-items-center sc:[&>*]:mx-auto
+     sc:[grid-template-columns:repeat(3,auto)] sc:[&>*]:w-[116px]">
+
+    <div>
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/peson4.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] text-[23px] font-normal leading-tight">Fanny Lövenheim </p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Head Of Agency</p>
+    </div>
+
+    <div>
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/person5.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] text-[23px] font-normal leading-tight">Mikael Thörnell</p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Business Director</p>
+    </div>
+
+    <div>
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/person6.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] text-[23px] font-normal leading-tight">Carl Tenberg</p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Co-founder</p>
+    </div>
+
+    <div class="sc:col-span-1 sc:mt-1 sc:col-start-1">
+        <img class="sc:h-[116px] sc:w-[116px] rounded-lg" src="images/person7.avif"/>
+        <p class="font-['Helvetica Neue'] pt-4 pb-1 sc:text-[14px] text-[23px] font-normal leading-tight">Martin Werner</p>
+        <p class="font-['Helvetica Neue'] text-[14px] sc:font-normal font-medium leading-tight">Co-founder</p>
+    </div>
+</div>
+
+
+<!--Hero section no 2 (includes team photos ) end-->
+
+
+
+<!--Fixed Side strip section start-->
+
+<div class="fixed top-1/2 right-0 -translate-y-1/2 bg-black text-white w-14 h-44 flex flex-col items-center justify-between pb-4 z-50">
+  <span class="text-[28px] font-bold">w.</span>
+  <span class="text-sm font-medium tracking-wide [writing-mode:vertical-rl] rotate-180">Honors</span>
+</div>
+
+<!--Fixed Side strip section end-->
+
+
+
+<!--Hero section no 3 (text section + overlapping cards section) start-->
+<div class="relative">
+
+
+  <!--Text section start-->
+  
+  <div id="how" class="bg-[#110404] text-white px-6 lg:px-20 py-20 font-[Helvetica Neue] min-h-[800px] mt-16 lg:mb-20">
+    
+    <h1 id="122" class="hidden lg:block max-w-7xl font-normal leading-[1.2] tracking-[-0.5px]
+               text-[32px] sm:text-[40px] lg:text-[55px] mx-auto  ">
+      We use Asana to streamline collaboration.<br /> Requests,
+      priorities and feedback are provided<br /> directly in the
+      platform, enabling a workflow <br /> with rapid iteration
+      and less meetings.
+    </h1>
+
+    
+    <h1 class="block lg:hidden max-w-7xl font-normal leading-[1.2] tracking-[-0.5px]
+               text-[28px] sm:text-[34px] md:text-[40px] 3xl:text-center mx-auto">
+      We use Asana to streamline collaboration. Requests,
+      priorities and feedback are provided directly in the
+      platform, enabling a workflow with rapid iteration
+      and less meetings.
+    </h1>
+  </div>
+<!--Text section end-->
+
+
+<!--cards section start-->
+
+  <div id="123" class="absolute inset-x-0 top-[400px] flex items-center justify-center 3xl:mx-72 2xl:mx-36">
+    <div class="relative rounded-3xl md:mx-10 md:p-6 overflow-hidden w-full ms:mx-4
+                border border-white/10 backdrop-blur-[80px] shadow-none bg-[#899fff33]">
+      
+    <div class="flex flex-nowrap items-center gap-16 ms:gap-6 text-white mb-6 mt-6 ml-7 ms:ml-4 overflow-x-auto  ">
+      <div class="hidden lg:flex items-center gap-2">
+        <span class="md:font-semibold sm:font-normal ms:text-xs">Shared resources</span>
+        <span class="text-sm text-gray-400">3</span>
+      </div>
+      <div class="flex items-center gap-2 sm:font-normal">
+        <span class="md:font-semibold ms:text-xs">+&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;Queue</span>
+        <span class="text-sm text-gray-400">4</span>
+      </div>
+      <div class="flex items-center gap-2 sm:font-normal mx-14 ms:mx-6">
+        <span class="font-semibold ms:text-xs">+&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;Active</span>
+        <span class="text-sm text-gray-400">1</span>
+      </div>
+      <div class="flex items-center gap-2 sm:font-normal">
+        <span class="font-semibold ms:text-xs">+&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;Approved</span>
+        <span class="text-sm text-gray-400">8</span>
+      </div>
+    </div>
+
+    
+    <div class="grid grid-cols-3 lg:grid-cols-4 relative z-10 ml-8 ms:ml-4">
+      
+    
+      <div class="hidden lg:flex flex-col md:gap-5 sm:gap-1">
+      
+        <div class="relative bg-[#1122ff1a] rounded-[22px] md:px-6 md:pb-14 text-white w-[90%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Brand assets</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[90%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Contact Details</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+      
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[90%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Final Deliverables</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+      
+      
+      <div class="flex flex-col -ml-3 ms:-ml-2 gap-5">
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Podcast Visual</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="relative bg-[#1122ff1a]  rounded-[22px] px-6 pb-14 text-white w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Podcast SoMe</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Case video</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white lg:hidden w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Infographic video</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
+    
+      <div class="flex flex-col -ml-5 ms:-ml-2 gap-5">
+        <div class="relative bg-[#1122ff1a] rounded-[22px] lg:px-6 pb-14 text-white w-[87%] ms:w-[92%] flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px] ms:line-clamp-2">Event campaign video</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
+    
+      <div class="flex flex-col -ml-5 ms:-ml-2 gap-5">
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px] ms:line-clamp-2">E-book yearly report</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class=" lg:ml-2 tracking-tighter font-normal ms:text-[11px] ms:line-clamp-2">Blog snippets E-book</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Linkedin templates</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="relative bg-[#1122ff1a] rounded-[22px] px-6 pb-14 text-white lg:hidden w-[87%] ms:w-[92%] h-full flex flex-col justify-between overflow-hidden shadow-md">
+          <div class="flex mt-4 z-10">
+            <span class="text-orange-500"><i class="fa-solid fa-circle-check fa-xs"></i></span>
+            <span class="ml-2 tracking-tighter font-normal ms:text-[11px]">Infographics video</span>
+          </div>
+          <div class="text-gray-300 text-sm z-10"><i class="fa-regular fa-circle-user"></i></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none"></div>
+        </div>  
+    </div>
+  </div>
+
+</div>
+
+
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-blue-gray-700/20 to-transparent pointer-events-none rounded-b-3xl "></div>
+  </div>
+  <!--cards section end-->
+</div>
+
+
+<!--Hero section no 3 (text section + overlapping cards section) end-->
+
+
+<!--Hero section no 4 (pricing section) start-->
+
+<div class="bg-[#e5e5e5] min-h-screen flex items-center justify-center flex-col lg:flex-row mt-20">
+  
+  
+  <div class="items-center basis-[45%] flex justify-end lg:mr-10 mb-8 lg:mb-0">
+    <h2 class="font-[Helvetica Neue] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[58px] 
+               leading-[1.15] lg:leading-[1.05] tracking-tighter font-normal text-black text-center lg:text-left">
+      Predictable monthly 
+      <br class="hidden lg:inline">
+      pricing for peace of 
+      <br class="hidden lg:inline">
+      mind
+    </h2>
+  </div>
+
+  
+  <div id="plans" 
+       class="bg-[#E5E4E2] rounded-[40px] p-5 flex flex-col gap-8 shadow-sm basis-[38%] lg:mr-28 
+              border border-gray-300 hover:border-black duration-300 w-[90%] lg:w-auto">
+    
+    <div class="bg-[#FF4E21] text-black rounded-[32px] px-5 py-4">
+      <h3 class="font-[Helvetica Neue] text-[28px] sm:text-[34px] lg:text-[40px] font-normal mb-4">Starting from</h3>
+      <p class="font-[Helvetica Neue] text-[20px] sm:text-[22px] lg:text-[25px] font-medium mb-8">€7,550 / 84,000SEK</p>
+
+      <p class="font-[Helvetica Neue] text-[14px] lg:text-[15px] mb-2">Your team on this plan:</p>
+      <div class="flex flex-wrap gap-2 mb-3 ml-1">
+        <span class="px-3 py-1 rounded-full bg-[#8B0000] text-white text-[10px] font-medium">Graphic Designer</span>
+        <span class="px-3 py-1 rounded-full bg-[#8B0000] text-white text-[10px] font-medium">Project Manager</span>
+        <span class="px-3 py-1 rounded-full bg-[#8B0000] text-white text-[10px] font-medium">Creative Director</span>
+      </div>
+    </div>
+
+    <button class="bg-[#FF4E21] text-black rounded-full px-8 py-3 flex items-center justify-between w-full text-[14px] font-normal font-[Helvetica Neue]">
+      <span>Talk to us about our membership</span>
+      <span class="ml-2 text-[20px]">→</span>
+    </button>
+  </div>
+</div>
+
+<!--Hero section no 4 (pricing section) end-->
+
+
+
+
+ <!--Slider section start-->
+   <div class="w-full overflow-hidden ">
+
+
+
+   
+ 
+  <div class="flex w-max animate-slide space-x-10 hover:[animation-play-state:paused] font-bold">
+    
+    
+    
+    <div class="flex rounded-3xl mb-16 ml-16 overflow-hidden w-[17%] bg-[#DCDCDC] flex-shrink-0 font-[Helvetica Neue] text-[14px] font-[475] tracking-tighter leading-tight "> 
+        <div> <img class="h-[210px] w-[270px] object-cover rounded-l-3xl" src="images/skinome.avif" /> </div> 
+        <div class="flex justify-center p-4 flex-col">
+             <p> “Working with Shore has been <br/>great. The team delivers high-<br/> quality work, and have been key <br/> 
+                in our efforts to quickly scale our <br/> design work and content.” </p> <p class="mt-5 text-[10px]">Henrik</p> 
+                <p class="text-[11px]">CEO & Co-founder, Mimo</p> </div> </div> 
+
+
+                
+    <div class="flex rounded-3xl mb-16 ml-16 overflow-hidden w-[16%] bg-[#DCDCDC] flex-shrink-0 font-[Helvetica Neue] text-[14px] font-[475] tracking-tighter leading-tight "> 
+        <div> <img class="h-[210px] w-[270px] object-cover rounded-l-3xl" src="images/scaleup.avif" /> </div> 
+        <div class="flex justify-center p-4 flex-col">
+             <p> “Working with Shore has been <br/>great. The team delivers high-<br/> quality work, and have been key <br/> 
+                in our efforts to quickly scale our <br/> design work and content.” </p> <p class="mt-5 text-[10px]">Henrik</p> 
+                <p class="text-[11px]" >CEO & Co-founder, Mimo</p> </div> </div> 
+
+
+                
+    <div class="flex rounded-3xl mb-16 ml-16 overflow-hidden w-[16%] flex-shrink-0 bg-[#DCDCDC] font-[Helvetica Neue] text-[14px] font-[475] tracking-tighter leading-tight "> 
+        <div> <img class="h-[210px] w-[270px] object-cover rounded-l-3xl" src="images/Mimo.avif" /> </div> 
+        <div class="flex justify-center p-4 flex-col">
+             <p> “Working with Shore has been <br/>great. The team delivers high-<br/> quality work, and have been key <br/> 
+                in our efforts to quickly scale our <br/> design work and content.” </p> <p class="mt-5 text-[10px]">Henrik</p> 
+                <p class="text-[11px]">CEO & Co-founder, Mimo</p> </div> </div> 
+    
+
+    <div class="flex rounded-3xl mb-16 ml-16 overflow-hidden w-[16%] flex-shrink-0 bg-[#DCDCDC] font-[Helvetica Neue] text-[14px] font-[475] tracking-tighter leading-tight " aria-hidden="true"> 
+        <div> <img class="h-[210px] w-[270px] object-cover rounded-l-3xl" src="images/skinome.avif" /> </div> 
+        <div class="flex justify-center p-4 flex-col">
+             <p> “Working with Shore has been <br/>great. The team delivers high-<br/> quality work, and have been key <br/> 
+                in our efforts to quickly scale our <br/> design work and content.” </p> <p class="mt-5 text-[10px]">Henrik</p> 
+                <p class="text-[11px]">CEO & Co-founder, Mimo</p> </div> </div> 
+
+                 <div class="flex rounded-3xl mb-16 ml-16 overflow-hidden w-[16%] flex-shrink-0 bg-[#DCDCDC] font-[Helvetica Neue] text-[14px] font-[475] tracking-tighter leading-tight " aria-hidden="true"> 
+        <div> <img class="h-[210px] w-[270px] object-cover rounded-l-3xl" src="images/scaleup.avif" /> </div> 
+        <div class="flex justify-center p-4 flex-col">
+             <p> “Working with Shore has been <br/>great. The team delivers high-<br/> quality work, and have been key <br/> 
+                in our efforts to quickly scale our <br/> design work and content.” </p> <p class="mt-5 text-[10px]">Henrik</p> 
+                <p class="text-[11px]">CEO & Co-founder, Mimo</p> </div> </div> 
+
+                 <div class="flex rounded-3xl mb-16 ml-16 overflow-hidden w-[16%] flex-shrink-0 bg-[#DCDCDC] font-[Helvetica Neue] text-[14px] font-[475] tracking-tighter leading-tight " aria-hidden="true"> 
+        <div> <img class="h-[210px] w-[270px] object-cover rounded-l-3xl" src="images/Mimo.avif" /> </div> 
+        <div class="flex justify-center p-4 flex-col">
+             <p> “Working with Shore has been <br/>great. The team delivers high-<br/> quality work, and have been key <br/> 
+                in our efforts to quickly scale our <br/> design work and content.” </p> <p class="mt-5 text-[10px]">Henrik</p> 
+                <p class="text-[11px]">CEO & Co-founder, Mimo</p> </div> </div> 
+
+    
+  </div>
+</div>
+
+    <!--Slider section start-->
+
+<!--Footer section start-->
+
+<div class="w-full min-h-screen bg-[#FF4E21] flex items-center justify-center overflow-hidden">
+  <div>
+    <img src="images/imagecopy-Picsart-AiImageEnhancer.jpg" class="max-w-full h-auto" />
+  </div>
+</div>
+
+<!--Footer section start-->
+
+</body>
+</html>
+
+
+
