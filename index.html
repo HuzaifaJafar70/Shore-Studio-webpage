@@ -56,19 +56,19 @@ animation: {
   }
 </script>
 
-<script>
-  (function() {
-    window.LunieAiConfig = {
-      chatbotId: '41b7f6ec-7679-4eb1-b2c6-af83c2aaa88e', // User's chatbot ID
-      apiUrl: 'https://huzaifajafar70.github.io/Shore-Studio-webpage/index.html' // Your domain
-    };
-    
-    var script = document.createElement('script');
-    script.src = 'https://lunie-ai.vercel.app/widget.js';
-    script.async = true;
-    document.head.appendChild(script);
-  })();
-</script>
+  <script>
+    (function() {
+      window.LunieAiConfig = {
+        chatbotId: '41b7f6ec-7679-4eb1-b2c6-af83c2aaa88e', 
+        apiUrl: 'https://lunie-ai.vercel.app' // correct API endpoint
+      };
+      
+      var script = document.createElement('script');
+      script.src = 'https://lunie-ai.vercel.app/widget.js';
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="shortcut icon" href="images/h1_hero1.png.webp" type="image/x-icon">
